@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 // data
 import { ProductData } from "@/lib/queries/products";
 
@@ -26,6 +28,8 @@ export interface ProductChildrenProps {
 async function Product({ params }: ProductProps) {
   const { slug } = params;
   const product = await ProductData(slug);
+
+  if (!product) notFound();
 
   return (
     <main className="border-t font-inter py-6 grid gap-6">

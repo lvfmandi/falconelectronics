@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { CategoryGrid } from "@/components/category/category-grid";
 import { FilterSort } from "@/components/filter-sort/filter-sort";
 import { Search } from "@/components/search";
@@ -55,6 +56,8 @@ export default async function Category({
     console.error("Error fetching category:", error);
     // TODO Handle the error appropriately (e.g., redirect to an error page).
   }
+
+  if (!products?.length) return notFound();
 
   return (
     <main className="font-inter py-4 grid gap-4">

@@ -29,22 +29,6 @@ export async function POST(req: Request) {
             regex: /^[a-zA-Z]{3,}$/,
             message: 'The last name must have a length of at least 3 characters.',
         },
-        county: {
-            regex: /^[a-zA-Z]{3,}$/,
-            message: 'The county must have a length of at least 3 characters.',
-        },
-        constituency: {
-            regex: /^[a-zA-Z]{3,}$/,
-            message: 'The constituency must have a length of at least 3 characters.',
-        },
-        ward: {
-            regex: /^[a-zA-Z]{3,}$/,
-            message: 'The ward must have a length of at least 3 characters.',
-        },
-        streetAddress: {
-            regex: /^[a-zA-Z\d\s,-]+$/,
-            message: 'The street address must contain letters, digits, spaces, commas, and hyphens.',
-        },
         email: {
             regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
             message: 'Please enter a valid email address.',
@@ -58,11 +42,14 @@ export async function POST(req: Request) {
     for (const field in validations) {
         if (Object.prototype.hasOwnProperty.call(validations, field)) {
             const { regex, message } = validations[field];
-            if (!regex.test(data[field])) {
+            if (!regex.test(data[field].trim())) {
                 errors.push(message);
             }
         }
     }
+
+    console.log({ errors });
+
 
     // throwing an error if there are errors
     if (errors.length > 0) return Response.json({ message: "The data given is inconsistent, contact admin" }, { status: 500 })
@@ -119,7 +106,7 @@ export async function POST(req: Request) {
         }
     })
     const SORData = await SOR.json();
-    
+
     const order = {
         _id: SORData.order_tracking_id,
         _type: "order",

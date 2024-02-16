@@ -51,5 +51,25 @@ export async function ProductsInCategories(categories: string[], searchParams: a
 
     console.log({ products, categories });
     return products
+}
 
+export async function NotFoundProducts(title: string = "Not Found") {
+    const { body } = await client.fetch(groq`*[_type == "page" && name == "${title}"][0] {
+        body[]{
+            ...,
+            products[]->{
+              ..., 
+              "tags": tags[]-> {..., name, slug},
+              "categories": categories[]-> {..., name, slug, parent},
+              "brand": brand-> {..., name, slug},
+              "warranty": warranty-> {..., name, slug},
+              "id": _id,
+            },
+        }
+    }`);
+
+    console.log({ body });
+
+
+    return body;
 }
