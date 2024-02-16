@@ -31,7 +31,7 @@ async function Product({ params }: ProductProps) {
     <main className="border-t font-inter py-6 grid gap-6">
       <ProductCategories
         product={product}
-        className="container font-jetbrains"
+        className="container font-schibsted_grotesk"
       />
       <div className="grid place-items-start md:grid-cols-2 xl:grid-cols-3 gap-6 container">
         <PurchaseOptionsProvider>

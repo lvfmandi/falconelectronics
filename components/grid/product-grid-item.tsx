@@ -92,7 +92,7 @@ export const ProductGridItem = ({
             <Icons.cart size={24} />
           </Button>
         </div>
-        <div className="font-jetbrains">
+        <div className="font-schibsted_grotesk">
           <span className="">
             Kes
             {discountedPrice

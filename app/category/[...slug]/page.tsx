@@ -60,7 +60,7 @@ export default async function Category({
     <main className="font-inter py-4 grid gap-4">
       <Search className="md:hidden" />
       <div className="container grid gap-4">
-        <div className="font-jetbrains space-y-2">
+        <div className="font-schibsted_grotesk space-y-2">
           {params.slug.map((slug, index) => (
             <Link
               href={`/category/${params.slug.slice(0, index + 1).join("/")}`}

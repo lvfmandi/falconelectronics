@@ -221,7 +221,7 @@ export const ProductReviews = ({ product }: ProductChildrenProps) => {
             )}
             <Button className="w-full">Add Review</Button>
             {userCredentails && (
-              <small className="flex justify-end">
+              <span className="flex justify-end">
                 <Button
                   variant="link"
                   className="w-fit"
@@ -232,7 +232,7 @@ export const ProductReviews = ({ product }: ProductChildrenProps) => {
                 >
                   Forget my credentials
                 </Button>
-              </small>
+              </span>
             )}
           </form>
         </div>
@@ -269,7 +269,7 @@ export const ProductReviews = ({ product }: ProductChildrenProps) => {
         ) : (
           <>
             <h6 className="font-light">No Reviews</h6>
-            <small>Add a review</small>
+            <span>Add a review</span>
           </>
         )}
       </div>

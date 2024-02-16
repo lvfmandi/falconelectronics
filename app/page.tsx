@@ -22,6 +22,9 @@ const components: PortableTextComponents = {
 };
 
 export default async function Home() {
+  const session = null;
+  if(!session) throw new Error("You need a session to access the page");
+  
   return (
     <main className="min-h-[50vh] border-t font-inter">
       <Search className="container md:hidden" />

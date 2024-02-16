@@ -11,7 +11,7 @@ export async function getCategories(parentId = null): Promise<Category[]> {
     for (const category of categories) {
         category.otherChildren = await getCategories(category._id);
     }
-
+    
     return categories;
 }
 

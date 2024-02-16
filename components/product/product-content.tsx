@@ -9,7 +9,7 @@ import { ProductReviews } from "./product-reviews";
 export const ProductContent = ({ product }: ProductChildrenProps) => {
   return (
     <Tabs defaultValue="Description" className="w-full container">
-      <TabsList className="grid justify-stretch h-fit md:grid-cols-3 font-jetbrains">
+      <TabsList className="grid justify-stretch h-fit md:grid-cols-3 font-schibsted_grotesk">
         <TabsTrigger value="Description">Description</TabsTrigger>
         <TabsTrigger value="Specifications">Specifications</TabsTrigger>
         <TabsTrigger value="Reviews">Reviews</TabsTrigger>

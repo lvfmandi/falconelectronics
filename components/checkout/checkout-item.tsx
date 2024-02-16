@@ -37,10 +37,10 @@ export const CheckoutItem = ({ product }: CheckoutItemProps) => {
               if (id.split("-").includes(sku)) {
                 return (
                   <div key={sku} className="flex space-x-1">
-                    <small>
+                    <span>
                       {_type === "productColor" ? "Color" : "Size"}:
-                    </small>
-                    <small className="text-gray-400">{name}</small>
+                    </span>
+                    <span className="text-gray-400">{name}</span>
                   </div>
                 );
               }
@@ -64,10 +64,10 @@ export const CheckoutItem = ({ product }: CheckoutItemProps) => {
                         key={`${variant._key}-${variantJSX[0]}`}
                         className="flex space-x-1"
                       >
-                        <small>{Object.keys(variantJSX)[0]}:</small>
-                        <small className="text-gray-400">
+                        <span>{Object.keys(variantJSX)[0]}:</span>
+                        <span className="text-gray-400">
                           {variantJSX[Object.keys(variantJSX)[0]]}
-                        </small>
+                        </span>
                       </div>
                     ))}
                 </React.Fragment>
@@ -75,13 +75,13 @@ export const CheckoutItem = ({ product }: CheckoutItemProps) => {
             })}
         </div>
         <div className="flex">
-          <small>
+          <span>
             {quantity} x {price.toLocaleString("en-US")} ={" "}
-          </small>
-          <small className="text-primary">
+          </span>
+          <span className="text-primary">
             {" "}
             {((quantity || 1) * price).toLocaleString("en-US")}
-          </small>
+          </span>
         </div>
       </div>
     </div>

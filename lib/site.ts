@@ -3,7 +3,7 @@ import { Icons } from "@/components/icons";
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-    name: "Cool Gadgets",
+    name: "Falcon Electronics",
     description: "The technology doctors",
     footer: {
         locations: [{ name: 'bbs mall Zone E Store GF-098', link: 'https://maps.app.goo.gl/yqdFEzoDu2BYiLHY8' }],

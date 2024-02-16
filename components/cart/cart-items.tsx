@@ -32,13 +32,13 @@ export const CartItems = () => {
       ) : (
         <div className="py-4 grid gap-4">
           <h6>No items in cart</h6>
-          <small>
+          <span>
             Please{" "}
             <Link href={"/"} className="w-fit text-primary">
               Continue Shopping
             </Link>{" "}
             to add items to cart.
-          </small>
+          </span>
         </div>
       )}
     </div>

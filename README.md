@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://https://noorelectronics.vercel.app/](http://https://noorelectronics.vercel.app/) with your browser to see the result.
+Open [http://https://falconelectronics.vercel.app/](http://https://falconelectronics.vercel.app/) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

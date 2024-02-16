@@ -22,7 +22,7 @@ const Contacts = () => {
           <h2 className="font-light text-3xl">Email</h2>
           <p>Email our response team:</p>
           <p className="text-primary">
-            <a href="mailto:coolgadgets@gmail.com">coolgadgets@gmail.com</a>
+            <a href="mailto:falconelectronics@gmail.com">falconelectronics@gmail.com</a>
           </p>
         </div>
       </div>

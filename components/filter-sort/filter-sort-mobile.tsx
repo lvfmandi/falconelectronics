@@ -15,7 +15,7 @@ export const FilterSortMobile = async () => {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="link" role="combobox" className="w-fit">
-            <small className="uppercase">Filter & Sort</small>
+            <span className="uppercase">Filter & Sort</span>
           </Button>
         </SheetTrigger>
         <SheetContent>

@@ -79,7 +79,7 @@ export const SortItem = () => {
         >
           {value ? (
             <div className="flex items-center gap-2 divide-x">
-              <small className="capitalize">Sort</small>
+              <span className="capitalize">Sort</span>
               <div className="flex gap-2 pl-2">
                 {value.map((valueItem) => (
                   <Badge
@@ -93,7 +93,7 @@ export const SortItem = () => {
               </div>
             </div>
           ) : (
-            <small className="capitalize">Sort</small>
+            <span className="capitalize">Sort</span>
           )}
         </Button>
       </PopoverTrigger>
@@ -111,7 +111,7 @@ export const SortItem = () => {
                     handleChange(sortOption.key, currentValue)
                   }
                 >
-                  <small>{sortOption.name}</small>
+                  <span>{sortOption.name}</span>
                   <Icons.check
                     className={cn(
                       "ml-auto h-4 w-4",

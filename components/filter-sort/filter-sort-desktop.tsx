@@ -22,10 +22,10 @@ export const FilterSortDesktop = async ({
 
   return (
     <div
-      className={`grid gap-2 lg:flex justify-between font-jetbrains mt-6 lg:mt-0 ${className}`}
+      className={`grid gap-2 lg:flex justify-between font-schibsted_grotesk mt-6 lg:mt-0 ${className}`}
     >
       <div className="grid gap-2">
-        <small>FILTER </small>
+        <span>FILTER </span>
         <div className="grid lg:flex gap-2">
           {Object.keys(filters).map((name) => (
             // change to its own client component where you can add state and copy paste again from radix
@@ -38,7 +38,7 @@ export const FilterSortDesktop = async ({
         </div>
       </div>
       <div className="grid gap-2 lg:justify-items-end">
-        <small>SORT</small>
+        <span>SORT</span>
         <div className="flex gap-2">
           <SortItem />
         </div>

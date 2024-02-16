@@ -73,7 +73,7 @@ module.exports = {
       },
       fontFamily: {
         inter: "var(--font-inter)",
-        jetbrains: "var(--font-jetbrains)",
+        schibsted_grotesk: "var(--font-schibsted_grotesk)",
       },
     },
   },

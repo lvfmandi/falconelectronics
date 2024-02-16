@@ -34,7 +34,7 @@ export const CartItem = ({ product }: CartItemProps) => {
         <Link href={`/product/${slug.current}`}>
           <p className="font-light">{name}</p>
         </Link>
-        <div className="justify-self-start flex items-center border font-jetbrains">
+        <div className="justify-self-start flex items-center border font-schibsted_grotesk">
           <Button
             className="rounded-none border-r"
             variant={"link"}
@@ -71,7 +71,7 @@ export const CartItem = ({ product }: CartItemProps) => {
             />
           )}
         </div>
-        <div className="flex justify-between font-jetbrains">
+        <div className="flex justify-between font-schibsted_grotesk">
           <span>Price per item:</span>
           <span>KES {price.toLocaleString("en-US")}</span>
         </div>

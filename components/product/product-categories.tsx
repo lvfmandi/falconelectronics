@@ -29,7 +29,7 @@ export async function ProductCategories({
   return (
     <div {...props}>
       <div className="">
-        <Link href="/"><small>HOME</small></Link>
+        <Link href="/"><span>HOME</span></Link>
         {productCategories?.slice().reverse().map((category, index) => {
           const previousSlugs = productCategories
             ?.slice().reverse()
@@ -44,11 +44,11 @@ export async function ProductCategories({
                 category.slug.current
               }`}
             >
-              <small>/ {category.name.toUpperCase()}</small>
+              <span>/ {category.name.toUpperCase()}</span>
             </Link>
           );
         })}
-        <small>/ {product.name.toUpperCase()}</small>
+        <span>/ {product.name.toUpperCase()}</span>
       </div>
     </div>
   );

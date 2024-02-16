@@ -27,9 +27,9 @@ export const CartSummary = () => {
       <div className="border self-start divide-y p-4 sticky top-[120px] ">
         <div className="py-2">
           <h5 className="font-light">Order Summary</h5>
-          <small className="text-gray-500">
+          <span className="text-gray-500">
             Cross check the items in the cart before checking out
-          </small>
+          </span>
         </div>
         {state?.items.length ? (
           <ul className="py-4 grid gap-2">
@@ -38,7 +38,7 @@ export const CartSummary = () => {
               return (
                 <li className="flex gap-4 justify-between" key={id}>
                   <span>{name}</span>
-                  <span className="font-jetbrains text-nowrap">
+                  <span className="font-schibsted_grotesk text-nowrap">
                     KES {itemTotal?.toLocaleString("en-US")}
                   </span>
                 </li>
@@ -46,16 +46,16 @@ export const CartSummary = () => {
             })}
           </ul>
         ) : (
-          <small className="py-4 block">
+          <span className="py-4 block">
             No Items in Cart.{" "}
             <Link href={"/"} className="text-primary">
               Add Items
             </Link>
-          </small>
+          </span>
         )}
         <div className="flex py-2 justify-between items-baseline text-primary">
           <span>Cart Total: </span>
-          <h6 className="font-jetbrains font-light">
+          <h6 className="font-schibsted_grotesk font-light">
             KES {state?.cartTotal.toLocaleString("en-US")}
           </h6>
         </div>

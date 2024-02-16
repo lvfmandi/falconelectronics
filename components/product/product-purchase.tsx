@@ -71,14 +71,14 @@ export const ProductPurchase = ({ product }: ProductChildrenProps) => {
           />
           <div>
             <h1 className="text-sm font-normal">{name}</h1>
-            <h2 className="text-base font-normal text-primary font-jetbrains">
-              <small>KES</small>{" "}
+            <h2 className="text-base font-normal text-primary font-schibsted_grotesk">
+              <span>KES</span>{" "}
               {(discountedPrice || price).toLocaleString("en-US")}
             </h2>
             {discountedPrice && (
-              <small className="line-through font-jetbrains">
+              <span className="line-through font-schibsted_grotesk">
                 KES {price.toLocaleString("en-US")}
-              </small>
+              </span>
             )}
           </div>
         </div>
@@ -101,10 +101,10 @@ export const ProductPurchase = ({ product }: ProductChildrenProps) => {
               {iconData.icon}
             </div>
             <div className="grid content-start">
-              <h6 className="text-sm uppercase font-medium text-gray-500 font-jetbrains">
+              <h6 className="text-sm uppercase font-medium text-gray-500 font-schibsted_grotesk">
                 {iconData.heading}
               </h6>
-              <small>{iconData.content}</small>
+              <span>{iconData.content}</span>
             </div>
           </div>
         ))}

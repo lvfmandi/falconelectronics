@@ -23,7 +23,7 @@ export const ProductReviewItem = ({
         <span className="capitalize">{name}</span>
       </div>
       <ReactStars value={rating} edit={false} />
-      <small>{comment}</small>
+      <span>{comment}</span>
     </div>
   );
 };

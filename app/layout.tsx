@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 // fonts
 import { Inter } from "next/font/google";
-import { JetBrains_Mono } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 
 // styles
 import "./globals.css";
@@ -16,14 +16,14 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
-const jetbrains = JetBrains_Mono({
+const schibsted_grotesk = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-jetbrains",
+  variable: "--font-schibsted_grotesk",
 });
 
 export const metadata: Metadata = {
-  title: "Noor Electronics",
-  description: "Buy electronics at Noor Electronics",
+  title: "Falcon Electronics",
+  description: "Buy electronics at Falcon Electronics",
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${jetbrains.variable} font-jetbrains`}>
+      <body className={`${inter.variable} ${schibsted_grotesk.variable} font-schibsted_grotesk`}>
         <Providers>
           <DesktopNav />
           {children}

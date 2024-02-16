@@ -37,7 +37,7 @@ export async function ProductsInCategories(categories: string[], searchParams: a
 
     const filter = `${productFilter}${categoryFilter}${tagFilter}${brandFilter}${warrantyFilter}${searchFilter}`;
 
-    return await client.fetch<Product[]>(
+    const products = await client.fetch<Product[]>(
         groq`*[${filter}] ${order} {
             ...,
             "tags": tags[]-> {..., name, slug},
@@ -48,4 +48,8 @@ export async function ProductsInCategories(categories: string[], searchParams: a
             "reviews": reviews[published == true]
         }`
     );
+
+    console.log({ products, categories });
+    return products
+
 }

@@ -31,9 +31,9 @@ export const NavItemChildren = ({
               passHref
             >
               <NavigationMenuLink>
-                <small className="uppercase whitespace-nowrap text-gray-500 hover:text-primary">
+                <span className="uppercase whitespace-nowrap text-gray-500 hover:text-primary">
                   {child.name}
-                </small>
+                </span>
               </NavigationMenuLink>
             </Link>
           )}

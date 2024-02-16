@@ -59,7 +59,7 @@ export function FilterSortItem({ name, filterItems }: FilterSortItemProps) {
         >
           {value ? (
             <div className="flex items-center gap-2 divide-x">
-              <small className="capitalize">{name}</small>
+              <span className="capitalize">{name}</span>
               <div className="pl-2">
                 <Badge variant="secondary" className="capitalize">
                   {value}
@@ -67,7 +67,7 @@ export function FilterSortItem({ name, filterItems }: FilterSortItemProps) {
               </div>
             </div>
           ) : (
-            <small className="capitalize">{name}</small>
+            <span className="capitalize">{name}</span>
           )}
         </Button>
       </PopoverTrigger>
@@ -82,7 +82,7 @@ export function FilterSortItem({ name, filterItems }: FilterSortItemProps) {
                 value={filterItem.slug.current}
                 onSelect={handleChange}
               >
-                <small>{filterItem.name}</small>
+                <span>{filterItem.name}</span>
                 <Icons.check
                   className={cn(
                     "ml-auto h-4 w-4",

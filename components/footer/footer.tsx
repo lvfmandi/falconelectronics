@@ -97,7 +97,7 @@ export async function Footer() {
         </div>
         <div className="">
           <div className="container flex items-center justify-between py-3">
-            <small>© Noor Electronics</small>
+            <span>© Falcon Electronics</span>
             <NextImage
               src={PaymentOptions}
               alt="Payment Options: Visa, Mastercard, Mpesa, Airtel Money"

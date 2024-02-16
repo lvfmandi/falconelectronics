@@ -116,7 +116,7 @@ export const ProductVariants: React.FC<ProductVariantsProps> = ({
                 return (
                   <li
                     onClick={() => handleChangeVariantState(variantKey, object)}
-                    className={`font-jetbrains ${
+                    className={`font-schibsted_grotesk ${
                       variantState &&
                       variantState[variantKey] &&
                       variantState[variantKey][1] === variantName
