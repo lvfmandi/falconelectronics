@@ -48,8 +48,6 @@ export async function POST(req: Request) {
         }
     }
 
-    console.log({ errors });
-
 
     // throwing an error if there are errors
     if (errors.length > 0) return Response.json({ message: "The data given is inconsistent, contact admin" }, { status: 500 })
@@ -135,6 +133,7 @@ export async function POST(req: Request) {
         await sanityClient.createIfNotExists(order, { autoGenerateArrayKeys: true });
         return Response.json(SORData, { status: 200 });
     } catch (error) {
+        console.log({ error });
         return Response.json({ message: error }, { status: 500 })
     }
 }
