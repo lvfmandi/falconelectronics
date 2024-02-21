@@ -49,9 +49,8 @@ export default async function Category({
 
     // getting products in the categories
     products = await ProductsInCategories(categorySlugs, searchParams);
-  } catch (error) {
-    console.error("Error fetching category:", error);
-    // TODO Handle the error appropriately (e.g., redirect to an error page).
+  } catch (error: any) {
+    throw new Error(error.message);
   }
 
   return (
@@ -71,13 +70,16 @@ export default async function Category({
             </Link>
           ))}
         </div>
-        <FilterSort />   
+        <FilterSort />
         {products?.length ? (
           <CategoryGrid products={products} />
         ) : (
           <div className="space-y-2">
             <h5 className="font-light">No Products in this category</h5>
-            <small>No products match the given description. Try adjusting the filter and sort</small>
+            <small>
+              No products match the given description. Try adjusting the filter
+              and sort
+            </small>
           </div>
         )}
       </div>
