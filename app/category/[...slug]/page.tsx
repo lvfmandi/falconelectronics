@@ -35,10 +35,7 @@ export default async function Category({
   try {
     lastCategory = await CategoryBySlug(lastCategorySlug);
 
-    if (!lastCategory) {
-      throw new Error("Please follow a better link");
-    }
-
+    if (!lastCategory) return notFound();
     // Fetch all children categories
     const categories = [
       lastCategory,
@@ -57,8 +54,6 @@ export default async function Category({
     // TODO Handle the error appropriately (e.g., redirect to an error page).
   }
 
-  if (!products?.length) return notFound();
-
   return (
     <main className="font-inter py-4 grid gap-4">
       <Search className="md:hidden" />
@@ -76,13 +71,13 @@ export default async function Category({
             </Link>
           ))}
         </div>
-        <FilterSort />
+        <FilterSort />   
         {products?.length ? (
           <CategoryGrid products={products} />
         ) : (
           <div className="space-y-2">
             <h5 className="font-light">No Products in this category</h5>
-            <small>Try adjusting the filter and sort</small>
+            <small>No products match the given description. Try adjusting the filter and sort</small>
           </div>
         )}
       </div>

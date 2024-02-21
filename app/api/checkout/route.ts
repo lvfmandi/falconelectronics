@@ -133,7 +133,6 @@ export async function POST(req: Request) {
         await sanityClient.createIfNotExists(order, { autoGenerateArrayKeys: true });
         return Response.json(SORData, { status: 200 });
     } catch (error) {
-        console.log({ error });
         return Response.json({ message: error }, { status: 500 })
     }
 }

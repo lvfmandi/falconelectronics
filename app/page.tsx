@@ -22,6 +22,8 @@ const components: PortableTextComponents = {
 };
 
 export default async function Home() {
+  await new Promise((resolve) => setTimeout(() => resolve(4), 5000));
+
   return (
     <main className="min-h-[50vh] border-t font-inter">
       <Search className="container md:hidden" />

@@ -49,7 +49,6 @@ export async function ProductsInCategories(categories: string[], searchParams: a
         }`
     );
 
-    console.log({ products, categories });
     return products
 }
 
@@ -67,9 +66,6 @@ export async function NotFoundProducts(title: string = "Not Found") {
             },
         }
     }`);
-
-    console.log({ body });
-
 
     return body;
 }

@@ -13,7 +13,7 @@ export const ProductGrid = ({ content }: ProductGridProps) => {
   const { title, description, products } = content;
   return (
     <div className="container py-12">
-      <div className="py-4 space-y-5 max-w-sm">
+      <div className="py-4 space-y-5 max-w-2xl">
         <h2 className="text-primary">{title}</h2>
         <p className="text-lg font-light">{description}</p>
       </div>
