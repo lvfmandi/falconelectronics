@@ -4,7 +4,7 @@ import { createClient } from "@sanity/client";
 export const sanityClient = createClient({
     projectId,
     dataset,
-    useCdn: true,
+    useCdn: false,
     apiVersion,
     token: process.env.NEXT_PUBLIC_POSTING_DATA_TOKEN,
 })

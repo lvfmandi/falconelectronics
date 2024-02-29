@@ -47,6 +47,8 @@ export default async function Category({
       (category) => `"${category.slug.current}"`
     );
 
+    console.log({ categorySlugs });
+
     // getting products in the categories
     products = await ProductsInCategories(categorySlugs, searchParams);
   } catch (error: any) {
