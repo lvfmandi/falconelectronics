@@ -10,7 +10,7 @@ export default function Loading() {
         <h5 className="font-light">
           Loading
           {[1, 2, 3].map((item) => (
-            <span className={cn("animate-pulse", `delay-${item * 150}`)}>.</span>
+            <span className={cn("animate-pulse", `delay-${item * 150}`)} key={item}>.</span>
           ))}
         </h5>
       </div>
